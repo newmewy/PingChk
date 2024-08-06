@@ -30,12 +30,8 @@
         {
             this.lbServer = new System.Windows.Forms.Label();
             this.txtServer = new System.Windows.Forms.TextBox();
-            this.lbAverage = new System.Windows.Forms.Label();
-            this.numAverage = new System.Windows.Forms.NumericUpDown();
-            this.lbMillis = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
-            this.barController1 = new PingChk.BarController();
-            ((System.ComponentModel.ISupportInitialize)(this.numAverage)).BeginInit();
+            this.bcMain = new PingChk.BarController();
             this.SuspendLayout();
             // 
             // lbServer
@@ -57,75 +53,30 @@
             this.txtServer.Text = "8.8.8.8";
             this.txtServer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lbAverage
-            // 
-            this.lbAverage.Location = new System.Drawing.Point(12, 40);
-            this.lbAverage.Name = "lbAverage";
-            this.lbAverage.Size = new System.Drawing.Size(63, 22);
-            this.lbAverage.TabIndex = 2;
-            this.lbAverage.Text = "Average:";
-            this.lbAverage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // numAverage
-            // 
-            this.numAverage.Location = new System.Drawing.Point(81, 41);
-            this.numAverage.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numAverage.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numAverage.Name = "numAverage";
-            this.numAverage.Size = new System.Drawing.Size(93, 25);
-            this.numAverage.TabIndex = 3;
-            this.numAverage.TabStop = false;
-            this.numAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numAverage.Value = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            // 
-            // lbMillis
-            // 
-            this.lbMillis.Location = new System.Drawing.Point(180, 40);
-            this.lbMillis.Name = "lbMillis";
-            this.lbMillis.Size = new System.Drawing.Size(46, 22);
-            this.lbMillis.TabIndex = 4;
-            this.lbMillis.Text = "millis.";
-            this.lbMillis.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(235, 9);
+            this.btnStart.Location = new System.Drawing.Point(235, 8);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(95, 57);
+            this.btnStart.Size = new System.Drawing.Size(95, 28);
             this.btnStart.TabIndex = 5;
             this.btnStart.TabStop = false;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
             // 
-            // barController1
+            // bcMain
             // 
-            this.barController1.Location = new System.Drawing.Point(7, 75);
-            this.barController1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.barController1.Name = "barController1";
-            this.barController1.Size = new System.Drawing.Size(324, 91);
-            this.barController1.TabIndex = 6;
+            this.bcMain.Location = new System.Drawing.Point(12, 43);
+            this.bcMain.Margin = new System.Windows.Forms.Padding(4);
+            this.bcMain.Name = "bcMain";
+            this.bcMain.Size = new System.Drawing.Size(324, 91);
+            this.bcMain.TabIndex = 6;
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(344, 179);
-            this.Controls.Add(this.barController1);
+            this.ClientSize = new System.Drawing.Size(344, 147);
+            this.Controls.Add(this.bcMain);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.lbMillis);
-            this.Controls.Add(this.numAverage);
-            this.Controls.Add(this.lbAverage);
             this.Controls.Add(this.txtServer);
             this.Controls.Add(this.lbServer);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -134,7 +85,6 @@
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "PingChk - Simple Network Monitoring Tool";
-            ((System.ComponentModel.ISupportInitialize)(this.numAverage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,11 +94,8 @@
 
         private System.Windows.Forms.Label lbServer;
         private System.Windows.Forms.TextBox txtServer;
-        private System.Windows.Forms.Label lbAverage;
-        private System.Windows.Forms.NumericUpDown numAverage;
-        private System.Windows.Forms.Label lbMillis;
         private System.Windows.Forms.Button btnStart;
-        private BarController barController1;
+        private BarController bcMain;
     }
 }
 

@@ -34,7 +34,7 @@
             this.pnBar2 = new System.Windows.Forms.Panel();
             this.pnBar3 = new System.Windows.Forms.Panel();
             this.pnBar4 = new System.Windows.Forms.Panel();
-            this.pnBar = new System.Windows.Forms.Panel();
+            this.pnBar5 = new System.Windows.Forms.Panel();
             this.pnBar6 = new System.Windows.Forms.Panel();
             this.pnBar7 = new System.Windows.Forms.Panel();
             this.pnBar8 = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@
             this.pnBars.Controls.Add(this.pnBar2);
             this.pnBars.Controls.Add(this.pnBar3);
             this.pnBars.Controls.Add(this.pnBar4);
-            this.pnBars.Controls.Add(this.pnBar);
+            this.pnBars.Controls.Add(this.pnBar5);
             this.pnBars.Controls.Add(this.pnBar6);
             this.pnBars.Controls.Add(this.pnBar7);
             this.pnBars.Controls.Add(this.pnBar8);
@@ -65,15 +65,15 @@
             this.pnBars.Controls.Add(this.pnBar12);
             this.pnBars.Controls.Add(this.pnBar13);
             this.pnBars.Controls.Add(this.pnBar14);
-            this.pnBars.Location = new System.Drawing.Point(3, 3);
+            this.pnBars.Location = new System.Drawing.Point(2, 2);
             this.pnBars.Name = "pnBars";
-            this.pnBars.Size = new System.Drawing.Size(317, 85);
+            this.pnBars.Size = new System.Drawing.Size(317, 100);
             this.pnBars.TabIndex = 8;
             // 
             // pnBar0
             // 
             this.pnBar0.BackColor = System.Drawing.Color.LimeGreen;
-            this.pnBar0.Location = new System.Drawing.Point(298, 25);
+            this.pnBar0.Location = new System.Drawing.Point(298, 40);
             this.pnBar0.Name = "pnBar0";
             this.pnBar0.Size = new System.Drawing.Size(15, 60);
             this.pnBar0.TabIndex = 14;
@@ -83,7 +83,7 @@
             this.pnBar1.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar1.Location = new System.Drawing.Point(277, 25);
             this.pnBar1.Name = "pnBar1";
-            this.pnBar1.Size = new System.Drawing.Size(15, 60);
+            this.pnBar1.Size = new System.Drawing.Size(15, 100);
             this.pnBar1.TabIndex = 13;
             // 
             // pnBar2
@@ -91,7 +91,7 @@
             this.pnBar2.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar2.Location = new System.Drawing.Point(256, 25);
             this.pnBar2.Name = "pnBar2";
-            this.pnBar2.Size = new System.Drawing.Size(15, 60);
+            this.pnBar2.Size = new System.Drawing.Size(15, 100);
             this.pnBar2.TabIndex = 12;
             // 
             // pnBar3
@@ -99,7 +99,7 @@
             this.pnBar3.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar3.Location = new System.Drawing.Point(235, 25);
             this.pnBar3.Name = "pnBar3";
-            this.pnBar3.Size = new System.Drawing.Size(15, 60);
+            this.pnBar3.Size = new System.Drawing.Size(15, 100);
             this.pnBar3.TabIndex = 11;
             // 
             // pnBar4
@@ -107,23 +107,23 @@
             this.pnBar4.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar4.Location = new System.Drawing.Point(214, 25);
             this.pnBar4.Name = "pnBar4";
-            this.pnBar4.Size = new System.Drawing.Size(15, 60);
+            this.pnBar4.Size = new System.Drawing.Size(15, 100);
             this.pnBar4.TabIndex = 10;
             // 
-            // pnBar
+            // pnBar5
             // 
-            this.pnBar.BackColor = System.Drawing.Color.LimeGreen;
-            this.pnBar.Location = new System.Drawing.Point(193, 25);
-            this.pnBar.Name = "pnBar";
-            this.pnBar.Size = new System.Drawing.Size(15, 60);
-            this.pnBar.TabIndex = 9;
+            this.pnBar5.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnBar5.Location = new System.Drawing.Point(193, 25);
+            this.pnBar5.Name = "pnBar5";
+            this.pnBar5.Size = new System.Drawing.Size(15, 100);
+            this.pnBar5.TabIndex = 9;
             // 
             // pnBar6
             // 
             this.pnBar6.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar6.Location = new System.Drawing.Point(172, 25);
             this.pnBar6.Name = "pnBar6";
-            this.pnBar6.Size = new System.Drawing.Size(15, 60);
+            this.pnBar6.Size = new System.Drawing.Size(15, 100);
             this.pnBar6.TabIndex = 8;
             // 
             // pnBar7
@@ -131,7 +131,7 @@
             this.pnBar7.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar7.Location = new System.Drawing.Point(151, 25);
             this.pnBar7.Name = "pnBar7";
-            this.pnBar7.Size = new System.Drawing.Size(15, 60);
+            this.pnBar7.Size = new System.Drawing.Size(15, 100);
             this.pnBar7.TabIndex = 7;
             // 
             // pnBar8
@@ -139,7 +139,7 @@
             this.pnBar8.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar8.Location = new System.Drawing.Point(130, 25);
             this.pnBar8.Name = "pnBar8";
-            this.pnBar8.Size = new System.Drawing.Size(15, 60);
+            this.pnBar8.Size = new System.Drawing.Size(15, 100);
             this.pnBar8.TabIndex = 6;
             // 
             // pnBar9
@@ -147,7 +147,7 @@
             this.pnBar9.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar9.Location = new System.Drawing.Point(109, 25);
             this.pnBar9.Name = "pnBar9";
-            this.pnBar9.Size = new System.Drawing.Size(15, 60);
+            this.pnBar9.Size = new System.Drawing.Size(15, 100);
             this.pnBar9.TabIndex = 5;
             // 
             // pnBar10
@@ -155,7 +155,7 @@
             this.pnBar10.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar10.Location = new System.Drawing.Point(88, 25);
             this.pnBar10.Name = "pnBar10";
-            this.pnBar10.Size = new System.Drawing.Size(15, 60);
+            this.pnBar10.Size = new System.Drawing.Size(15, 100);
             this.pnBar10.TabIndex = 4;
             // 
             // pnBar11
@@ -163,7 +163,7 @@
             this.pnBar11.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar11.Location = new System.Drawing.Point(67, 25);
             this.pnBar11.Name = "pnBar11";
-            this.pnBar11.Size = new System.Drawing.Size(15, 60);
+            this.pnBar11.Size = new System.Drawing.Size(15, 100);
             this.pnBar11.TabIndex = 3;
             // 
             // pnBar12
@@ -171,7 +171,7 @@
             this.pnBar12.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar12.Location = new System.Drawing.Point(46, 25);
             this.pnBar12.Name = "pnBar12";
-            this.pnBar12.Size = new System.Drawing.Size(15, 60);
+            this.pnBar12.Size = new System.Drawing.Size(15, 100);
             this.pnBar12.TabIndex = 2;
             // 
             // pnBar13
@@ -179,7 +179,7 @@
             this.pnBar13.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar13.Location = new System.Drawing.Point(25, 43);
             this.pnBar13.Name = "pnBar13";
-            this.pnBar13.Size = new System.Drawing.Size(15, 42);
+            this.pnBar13.Size = new System.Drawing.Size(15, 100);
             this.pnBar13.TabIndex = 1;
             // 
             // pnBar14
@@ -187,16 +187,15 @@
             this.pnBar14.BackColor = System.Drawing.Color.LimeGreen;
             this.pnBar14.Location = new System.Drawing.Point(4, 25);
             this.pnBar14.Name = "pnBar14";
-            this.pnBar14.Size = new System.Drawing.Size(15, 60);
+            this.pnBar14.Size = new System.Drawing.Size(15, 100);
             this.pnBar14.TabIndex = 0;
             // 
             // BarController
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.pnBars);
             this.Name = "BarController";
-            this.Size = new System.Drawing.Size(324, 91);
+            this.Size = new System.Drawing.Size(322, 104);
             this.pnBars.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -210,7 +209,7 @@
         private System.Windows.Forms.Panel pnBar2;
         private System.Windows.Forms.Panel pnBar3;
         private System.Windows.Forms.Panel pnBar4;
-        private System.Windows.Forms.Panel pnBar;
+        private System.Windows.Forms.Panel pnBar5;
         private System.Windows.Forms.Panel pnBar6;
         private System.Windows.Forms.Panel pnBar7;
         private System.Windows.Forms.Panel pnBar8;
