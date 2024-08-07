@@ -38,6 +38,18 @@ namespace PingChk
             }
         }
 
+        public static Color GetColorByLatency(long latency, int greenWhenBelow = 30, int yellowWhenBelow = 100, int orangeWhenBelow = 200)
+        {
+            // In case of error then return Silver
+            if (latency < 0) return Color.Silver;
+            // Otherwise, return color depends on latency data
+            else if (latency <= greenWhenBelow) return Color.LimeGreen;
+            else if (latency <= yellowWhenBelow) return Color.Yellow;
+            else if (latency <= orangeWhenBelow) return Color.Orange;
+            // If latency is higher than orange zone then return red color (Higher or timedout will be the same)
+            else return Color.Red;
+        }
+
         public static long GetServerLatency(string serverAddress, int timeout = 500, int fallbackLatency = 500)
         {
             using (var ping = new Ping())
