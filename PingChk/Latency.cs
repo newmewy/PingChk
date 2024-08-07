@@ -10,7 +10,7 @@ namespace PingChk
 {
     public static class Latency
     {
-        public static async Task<double> GetServerLatencyAsync(string serverAddress, int timeout = 500, int fallbackLatency = 500)
+        public static async Task<long> GetServerLatencyAsync(string serverAddress, int timeout = 500, int fallbackLatency = 500)
         {
             using (var ping = new Ping())
             {
@@ -48,6 +48,34 @@ namespace PingChk
             else if (latency <= orangeWhenBelow) return Color.Orange;
             // If latency is higher than orange zone then return red color (Higher or timedout will be the same)
             else return Color.Red;
+        }
+
+        public static long GetServerLatency(string serverAddress, int timeout = 500, int fallbackLatency = 500)
+        {
+            using (var ping = new Ping())
+            {
+                try
+                {
+                    // Send ping to specific server
+                    var reply = ping.Send(serverAddress, timeout);
+                    // If there is success ...
+                    if (reply.Status == IPStatus.Success)
+                    {
+                        // Return latency value in milliseconds
+                        return reply.RoundtripTime;
+                    }
+                    else
+                    {
+                        // Otherwise, return fallback value instead
+                        return fallbackLatency;
+                    }
+                }
+                catch
+                {
+                    // If there is error, return fallback as well
+                    return fallbackLatency;
+                }
+            }
         }
     }
 }

@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbServer = new System.Windows.Forms.Label();
             this.txtServer = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.bcMain = new PingChk.BarController();
+            this.tmrLatencyChecker = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbServer
@@ -60,8 +62,10 @@
             this.btnStart.Size = new System.Drawing.Size(95, 28);
             this.btnStart.TabIndex = 5;
             this.btnStart.TabStop = false;
+            this.btnStart.Tag = "to:start";
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // bcMain
             // 
@@ -70,6 +74,11 @@
             this.bcMain.Name = "bcMain";
             this.bcMain.Size = new System.Drawing.Size(324, 91);
             this.bcMain.TabIndex = 6;
+            // 
+            // tmrLatencyChecker
+            // 
+            this.tmrLatencyChecker.Interval = 1000;
+            this.tmrLatencyChecker.Tick += new System.EventHandler(this.tmrLatencyChecker_Tick);
             // 
             // Main
             // 
@@ -96,6 +105,7 @@
         private System.Windows.Forms.TextBox txtServer;
         private System.Windows.Forms.Button btnStart;
         private BarController bcMain;
+        private System.Windows.Forms.Timer tmrLatencyChecker;
     }
 }
 
