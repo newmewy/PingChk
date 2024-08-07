@@ -112,6 +112,8 @@ namespace PingChk
             Bars[index].Height = Map(value, MinLatency, MaxLatency, BarMinY, BarMaxY);
             // Move the bar into calculated location based on their height
             Bars[index].Location = new Point(Bars[index].Location.X, BarMaxY - Bars[index].Height);
+            // Update bar's color by its latency value
+            Bars[index].BackColor = Latency.GetColorByLatency(value);
         }
 
         public void UpdateBars()
