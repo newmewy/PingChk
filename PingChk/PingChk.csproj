@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Latency.cs" />
     <Compile Include="BarController.cs">
       <SubType>UserControl</SubType>
     </Compile>
