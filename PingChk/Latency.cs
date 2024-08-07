@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -35,6 +36,18 @@ namespace PingChk
                     return fallbackLatency;
                 }
             }
+        }
+
+        public static Color GetColorByLatency(long latency, int greenWhenBelow = 30, int yellowWhenBelow = 100, int orangeWhenBelow = 200)
+        {
+            // In case of error then return Silver
+            if (latency < 0) return Color.Silver;
+            // Otherwise, return color depends on latency data
+            else if (latency <= greenWhenBelow) return Color.LimeGreen;
+            else if (latency <= yellowWhenBelow) return Color.Yellow;
+            else if (latency <= orangeWhenBelow) return Color.Orange;
+            // If latency is higher than orange zone then return red color (Higher or timedout will be the same)
+            else return Color.Red;
         }
     }
 }
