@@ -29,11 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.lbServer = new System.Windows.Forms.Label();
             this.txtServer = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.bcMain = new PingChk.BarController();
             this.tmrLatencyChecker = new System.Windows.Forms.Timer(this.components);
+            this.statusMain = new System.Windows.Forms.StatusStrip();
+            this.ledAverageLatency = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbAverageLatency = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbSpring = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbCurrentLatency = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnSettings = new System.Windows.Forms.ToolStripDropDownButton();
+            this.statusMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbServer
@@ -80,10 +88,61 @@
             this.tmrLatencyChecker.Interval = 1000;
             this.tmrLatencyChecker.Tick += new System.EventHandler(this.tmrLatencyChecker_Tick);
             // 
+            // statusMain
+            // 
+            this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ledAverageLatency,
+            this.lbAverageLatency,
+            this.lbCurrentLatency,
+            this.lbSpring,
+            this.btnSettings});
+            this.statusMain.Location = new System.Drawing.Point(0, 143);
+            this.statusMain.Name = "statusMain";
+            this.statusMain.Size = new System.Drawing.Size(344, 22);
+            this.statusMain.SizingGrip = false;
+            this.statusMain.TabIndex = 7;
+            this.statusMain.Text = "statusStrip1";
+            // 
+            // ledAverageLatency
+            // 
+            this.ledAverageLatency.Font = new System.Drawing.Font("Segoe UI Symbol", 9F);
+            this.ledAverageLatency.ForeColor = System.Drawing.Color.Silver;
+            this.ledAverageLatency.Name = "ledAverageLatency";
+            this.ledAverageLatency.Size = new System.Drawing.Size(17, 17);
+            this.ledAverageLatency.Text = "●";
+            // 
+            // lbAverageLatency
+            // 
+            this.lbAverageLatency.Name = "lbAverageLatency";
+            this.lbAverageLatency.Size = new System.Drawing.Size(84, 17);
+            this.lbAverageLatency.Text = "Average: 32ms";
+            // 
+            // lbSpring
+            // 
+            this.lbSpring.Name = "lbSpring";
+            this.lbSpring.Size = new System.Drawing.Size(123, 17);
+            this.lbSpring.Spring = true;
+            // 
+            // lbCurrentLatency
+            // 
+            this.lbCurrentLatency.Name = "lbCurrentLatency";
+            this.lbCurrentLatency.Size = new System.Drawing.Size(74, 17);
+            this.lbCurrentLatency.Text = "(Now: 22ms)";
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
+            this.btnSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(29, 20);
+            this.btnSettings.Text = "toolStripDropDownButton1";
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(344, 147);
+            this.ClientSize = new System.Drawing.Size(344, 165);
+            this.Controls.Add(this.statusMain);
             this.Controls.Add(this.bcMain);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtServer);
@@ -94,6 +153,8 @@
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "PingChk - Simple Network Monitoring Tool";
+            this.statusMain.ResumeLayout(false);
+            this.statusMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +167,12 @@
         private System.Windows.Forms.Button btnStart;
         private BarController bcMain;
         private System.Windows.Forms.Timer tmrLatencyChecker;
+        private System.Windows.Forms.StatusStrip statusMain;
+        private System.Windows.Forms.ToolStripStatusLabel ledAverageLatency;
+        private System.Windows.Forms.ToolStripStatusLabel lbAverageLatency;
+        private System.Windows.Forms.ToolStripStatusLabel lbSpring;
+        private System.Windows.Forms.ToolStripStatusLabel lbCurrentLatency;
+        private System.Windows.Forms.ToolStripDropDownButton btnSettings;
     }
 }
 
