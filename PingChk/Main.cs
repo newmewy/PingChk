@@ -41,6 +41,8 @@ namespace PingChk
                 btnStart.Tag = clickToStopTag;
                 // Update button's text
                 btnStart.Text = clickToStopText;
+                // Disable server text box
+                txtServer.Enabled = false;
             }
             else
             {
@@ -50,6 +52,8 @@ namespace PingChk
                 btnStart.Tag = clickToStartTag;
                 // Update button's text
                 btnStart.Text = clickToStartText;
+                // Enable server text box
+                txtServer.Enabled = true;
             }
         }
     }
