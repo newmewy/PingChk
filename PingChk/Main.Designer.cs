@@ -38,8 +38,8 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.ledAverageLatency = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbAverageLatency = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lbSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbCurrentLatency = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbSpring = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnSettings = new System.Windows.Forms.ToolStripDropDownButton();
             this.statusMain.SuspendLayout();
             this.SuspendLayout();
@@ -114,20 +114,19 @@
             // lbAverageLatency
             // 
             this.lbAverageLatency.Name = "lbAverageLatency";
-            this.lbAverageLatency.Size = new System.Drawing.Size(84, 17);
-            this.lbAverageLatency.Text = "Average: 32ms";
-            // 
-            // lbSpring
-            // 
-            this.lbSpring.Name = "lbSpring";
-            this.lbSpring.Size = new System.Drawing.Size(123, 17);
-            this.lbSpring.Spring = true;
+            this.lbAverageLatency.Size = new System.Drawing.Size(69, 17);
+            this.lbAverageLatency.Text = "Press [Start]";
             // 
             // lbCurrentLatency
             // 
             this.lbCurrentLatency.Name = "lbCurrentLatency";
-            this.lbCurrentLatency.Size = new System.Drawing.Size(74, 17);
-            this.lbCurrentLatency.Text = "(Now: 22ms)";
+            this.lbCurrentLatency.Size = new System.Drawing.Size(0, 17);
+            // 
+            // lbSpring
+            // 
+            this.lbSpring.Name = "lbSpring";
+            this.lbSpring.Size = new System.Drawing.Size(168, 17);
+            this.lbSpring.Spring = true;
             // 
             // btnSettings
             // 
