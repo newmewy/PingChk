@@ -42,9 +42,16 @@ namespace PingChk
             }
             // Push data into bar controller
             bcMain.PushData(Convert.ToInt32(latency));
+            // Get average info
+            var average60 = Convert.ToInt32(LatencyData60.Average());
+            var average15 = Convert.ToInt32(LatencyData15.Average());
             // Update statistics labels
             lbCurrentLatency.Text = $"(Now: {latency}ms)";
-            lbAverageLatency.Text = $"AVG60S: {Convert.ToInt32(LatencyData60.Average())}ms | AVG15S: {Convert.ToInt32(LatencyData15.Average())}ms";
+            lbAverageLatency.Text = $"AVG60S: {average60}ms | AVG15S: {average15}ms";
+            // Get color by average latency (Note: LED is for 60S average only)
+            var average60color = Latency.GetColorByLatency(average60);
+            // Update LED
+            ledAverageLatency.ChangeColor(average60color);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -82,6 +89,8 @@ namespace PingChk
                 // Update statistics labels
                 lbAverageLatency.Text = "Paused, please press [Start] again";
                 lbCurrentLatency.Text = "";
+                // Reset LED to gray
+                ledAverageLatency.TurnSilver();
             }
         }
     }
