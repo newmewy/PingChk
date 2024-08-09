@@ -120,4 +120,22 @@
   <metadata name="tmrLatencyChecker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="statusMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSettings.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVDhPlZNbLwNBFMf3xSX4irygot2VVAXdtqZouje3
+        TTZkt5Emgu56lCBe8AXwgIRvIQRvxvmfzpa6PDjJP5mdOb9zmx3tL3OjWDiN1iuEtdr+20Sz2U+OhggP
+        B4LgYMiL4hOvkUgWrbGHM/j4/nGfwtoG2AmT8zYQ33qN1mMH7gh7OEskfMEonMs1upyjWFbXt2XR3mRV
+        N7alG305J4FROFVApVHUGxzUN3dlXqxK3bS7hL1asMOws9W6BaNwTeOeUSJlzou1NjRvXWaL1iTLtK+w
+        N6KbVH4sZ2r+c6HgDTJMERe8MDlCZJSdwplM2MMOZEKIXgQZ0UuysLQu5+qBNMrOOflWKEDrBTCEfhEA
+        WRXbMd10suPTVTkxW5MVL1KJ7Jd/BRjtBAg/A7iNhL5VCzRtDkDlomzFcgvU1jVmgBZoBm/kd0KqsEM6
+        RFxVvoohWhwEWVkEj1H24VxR1rf2pFFyn7JCDDEM+3qNuCpkwsDQM8rGN+DFjaacXfbfc0XrPiPE5zUS
+        qKdzgHBVKBX9QlgjM2DuvS1d4d2/sh3u3+Ge562Ap11eCblnlG2Y9gPgnGmdGYbf/R7wQNLHhJ9kquRe
+        pNlypn2KnlE2Mv+AfzNyFFmz/gphrba/maZ9ALlfzckfWUs4AAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

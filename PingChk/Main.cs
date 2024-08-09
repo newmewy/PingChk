@@ -12,6 +12,9 @@ namespace PingChk
 {
     public partial class Main : Form
     {
+        private List<long> LatencyData60 { get; set; } = new List<long>();
+        private List<long> LatencyData15 { get; set; } = new List<long>();
+
         public Main()
         {
             InitializeComponent();
@@ -21,13 +24,39 @@ namespace PingChk
         {
             // Request for latency data
             var latency = await Latency.GetServerLatencyAsync(txtServer.Text);
-            // Just push data into bar controller
+            // Add latency value to data array
+            LatencyData60.Add(latency);
+            // If latency data is exceeded ...
+            if (LatencyData60.Count > 60)
+            {
+                // Then remove the last one
+                LatencyData60.RemoveAt(0);
+            }
+            // Add latency value to data array
+            LatencyData15.Add(latency);
+            // If latency data is exceeded ...
+            if (LatencyData15.Count > 15)
+            {
+                // Then remove the last one
+                LatencyData15.RemoveAt(0);
+            }
+            // Push data into bar controller
             bcMain.PushData(Convert.ToInt32(latency));
+            // Get average info
+            var average60 = Convert.ToInt32(LatencyData60.Average());
+            var average15 = Convert.ToInt32(LatencyData15.Average());
+            // Update statistics labels
+            lbCurrentLatency.Text = $"(Now: {latency}ms)";
+            lbAverageLatency.Text = $"AVG60S: {average60}ms | AVG15S: {average15}ms";
+            // Get color by average latency (Note: LED is for 60S average only)
+            var average60color = Latency.GetColorByLatency(average60);
+            // Update LED
+            ledAverageLatency.ChangeColor(average60color);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            // Define tag values
+            // Define tag value
             var clickToStartTag = "to:start";
             var clickToStopTag = "to:stop";
             var clickToStartText = "Start";
@@ -41,6 +70,11 @@ namespace PingChk
                 btnStart.Tag = clickToStopTag;
                 // Update button's text
                 btnStart.Text = clickToStopText;
+                // Disable server text box
+                txtServer.Enabled = false;
+                // Update statistics labels
+                lbAverageLatency.Text = "";
+                lbCurrentLatency.Text = "{Starting...)";
             }
             else
             {
@@ -50,6 +84,13 @@ namespace PingChk
                 btnStart.Tag = clickToStartTag;
                 // Update button's text
                 btnStart.Text = clickToStartText;
+                // Enable server text box
+                txtServer.Enabled = true;
+                // Update statistics labels
+                lbAverageLatency.Text = "Paused, please press [Start] again";
+                lbCurrentLatency.Text = "";
+                // Reset LED to gray
+                ledAverageLatency.TurnSilver();
             }
         }
     }
